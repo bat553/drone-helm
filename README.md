@@ -8,15 +8,15 @@
 
 This plugin allows to deploy a [Helm](https://github.com/kubernetes/helm) chart into a [Kubernetes](https://github.com/kubernetes/kubernetes) cluster.
 
-* Current `helm` version: 2.14.1
-* Current `kubectl` version: 1.14.3
+* Current `helm` version: 3.13.0
+* Current `kubectl` version: v1.28.2
 
 ## Drone Pipeline Usage
 
 For the usage information and a listing of the available options please take a look at [the docs](DOCS.md).
 
 
-Run the local image (or replace `drone-helm` with `quay.io/ipedrazas/drone-helm`:
+Run the local image (or replace `drone-helm` with `registry.swla.be/public/drone-helm`:
 
 ```bash
 docker run --rm \
@@ -31,7 +31,7 @@ docker run --rm \
   -e PLUGIN_DEBUG=true \
   -e PLUGIN_DRY_RUN=true \
   -e DRONE_BUILD_EVENT=push \
-  quay.io/ipedrazas/drone-helm
+  registry.swla.be/public/drone-helm
 ```
 
 ### Troubleshooting
